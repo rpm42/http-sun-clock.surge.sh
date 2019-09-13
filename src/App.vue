@@ -1,26 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Main/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Main from './components/Main.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Main
   }
 }
 </script>
 <style lang="stylus">
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap&subset=cyrillic')
+
 #app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
+  font-size: 18px
+  font-family 'Roboto Condensed', sans-serif
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+  max-width: 240px
+  width: 100vw
+  margin: auto
+
 </style>
