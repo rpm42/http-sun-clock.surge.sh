@@ -143,13 +143,12 @@ export default {
       
       const self = this
       setInterval(_ => {
+        const latitude = typeof this.latitude === 'string' ? parseFloat(this.latitude) : this.latitude
+        const longitude = typeof this.longitude === 'string' ? parseFloat(this.longitude) : this.longitude
           Vue.set(
             self,
             'sunClock',
-            new SunClock({
-              latitude: parseFloat(self.latitude),
-              longitude: parseFloat(self.longitude)
-            })
+            new SunClock({ latitude, longitude })
           )
         },
         500
